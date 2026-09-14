@@ -1,0 +1,13 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.1875rem;
+}
+
+.mark {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
