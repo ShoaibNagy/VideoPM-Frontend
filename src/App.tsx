@@ -5,6 +5,11 @@ const LoginPage = lazy(async () => {
   const module = await import('./pages/LoginPage/LoginPage');
   return { default: module.LoginPage };
 });
+ 
+const RegistrationPage = lazy(async () => {
+  const module = await import('./pages/RegistrationPage/RegistrationPage');
+  return { default: module.RegistrationPage };
+});
 
 function ComingSoon({ title }: { title: string }) {
   return (
@@ -21,7 +26,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<ComingSoon title="Sign up" />} />
+        <Route path="/register" element={<RegistrationPage />} />
+        <Route path="/dashboard" element={<ComingSoon title="Dashboard" />} />
       </Routes>
     </Suspense>
   );
